@@ -5,21 +5,35 @@ static const unsigned int borderpx  = 1;        /* border pixel of windows */
 static const unsigned int snap      = 32;       /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
-static const char *fonts[]          = { "JetBrains Mono Nerd Font:antialias=true:size=10" };
-static const char dmenufont[]       = "JetBrains Mono Nerd Font:antialias=true:size=10";
+static const char *fonts[]          = { "JetBrains Mono Nerd Font:antialias=true:size=11", "fontawesome:size=11" };
+static const char dmenufont[]       = "JetBrains Mono Nerd Font:antialias=true:size=11";
 static const char col_gray1[]       = "#222222";
 static const char col_gray2[]       = "#444444";
 static const char col_gray3[]       = "#bbbbbb";
 static const char col_gray4[]       = "#eeeeee";
 static const char col_cyan[]        = "#005577";
+static const char col_sinanju[]     = "#c92b32";
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
-	[SchemeNorm] = { col_gray3, col_gray1, col_gray2 },
-	[SchemeSel]  = { col_gray4, col_cyan,  col_cyan  },
+	[SchemeNorm] = { col_gray3, col_gray1, col_gray2 }, /* col_gray3, col_gray1, col_gray2 */
+	[SchemeSel]  = { col_gray4, col_gray1,  col_sinanju }, /* col_gray4, col_cyan, col_cyan */
 };
 
 /* tagging */
-static const char *tags[] = { "1", "2", "3", "4", "5", "6", "7", "8", "9" };
+static const char *tags[] = { "\uf17c", "2", "3", "4", "5", "6", "7", "8", "9" };
+
+static const char *tagsel[][2] = {
+	/*  fg          bg  */
+	{col_gray1, col_sinanju}, /* tag 1 */
+	{col_gray1, col_sinanju}, /* tag 2 */
+	{col_gray1, col_sinanju}, /* tag 3 */
+	{col_gray1, col_sinanju}, /* tag 4 */
+	{col_gray1, col_sinanju}, /* tag 5 */
+	{col_gray1, col_sinanju}, /* tag 6 */
+        {col_gray1, col_sinanju}, /* tag 7 */
+        {col_gray1, col_sinanju}, /* tag 8 */
+        {col_gray1, col_sinanju}, /* tag 9 */
+};
 
 static const Rule rules[] = {
 	/* xprop(1):

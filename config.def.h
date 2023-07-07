@@ -12,10 +12,11 @@ static const char col_gray2[]       = "#444444";
 static const char col_gray3[]       = "#bbbbbb";
 static const char col_gray4[]       = "#eeeeee";
 static const char col_cyan[]        = "#005577";
+static const char col_sinanju[]     = "#c92b32";
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
 	[SchemeNorm] = { col_gray3, col_gray1, col_gray2 }, /* col_gray3, col_gray1, col_gray2 */
-	[SchemeSel]  = { col_gray4, col_cyan,  col_cyan  }, /* col_gray4, col_cyan, col_cyan */
+	[SchemeSel]  = { col_gray4, col_gray1,  col_sinanju }, /* col_gray4, col_cyan, col_cyan */
 };
 
 /* tagging */
@@ -23,15 +24,15 @@ static const char *tags[] = { "\uf17c", "2", "3", "4", "5", "6", "7", "8", "9" }
 
 static const char *tagsel[][2] = {
 	/*  fg          bg  */
-	{"#ffffff", "#ffffff"}, /* tag 1 */
-	{"#ffffff", "#ffffff"}, /* tag 2 */
-	{"#ffffff", "#ffffff"}, /* tag 3 */
-	{"#ffffff", "#ffffff"}, /* tag 4 */
-	{"#ffffff", "#ffffff"}, /* tag 5 */
-	{"#ffffff", "#ffffff"}, /* tag 6 */
-        {"#ffffff", "#ffffff"}, /* tag 7 */
-        {"#ffffff", "#ffffff"}, /* tag 8 */
-        {"#ffffff", "#ffffff"}, /* tag 9 */
+	{col_gray1, col_sinanju}, /* tag 1 */
+	{col_gray1, col_sinanju}, /* tag 2 */
+	{col_gray1, col_sinanju}, /* tag 3 */
+	{col_gray1, col_sinanju}, /* tag 4 */
+	{col_gray1, col_sinanju}, /* tag 5 */
+	{col_gray1, col_sinanju}, /* tag 6 */
+        {col_gray1, col_sinanju}, /* tag 7 */
+        {col_gray1, col_sinanju}, /* tag 8 */
+        {col_gray1, col_sinanju}, /* tag 9 */
 };
 
 static const Rule rules[] = {
