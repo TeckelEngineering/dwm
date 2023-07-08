@@ -12,27 +12,32 @@ static const char col_gray2[]       = "#444444";
 static const char col_gray3[]       = "#bbbbbb";
 static const char col_gray4[]       = "#eeeeee";
 static const char col_cyan[]        = "#005577";
-static const char col_sinanju[]     = "#c92b32";
+static const char col_ashgray[]     = "#bec5ad";
+static const char col_sage[]        = "#a4b494";
+static const char col_seagreen[]    = "#519872";
+static const char col_feldgrau[]    = "#3b5249";
+static const char col_resinblack[]  = "#34252f";
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
-	[SchemeNorm] = { col_gray3, col_gray1, col_gray2 }, /* col_gray3, col_gray1, col_gray2 */
-	[SchemeSel]  = { col_gray4, col_gray1,  col_sinanju }, /* col_gray4, col_cyan, col_cyan */
+	[SchemeNorm] = { col_sage, col_feldgrau, col_resinblack }, /* col_gray3, col_gray1, col_gray2 */
+	[SchemeSel]  = { col_sage, col_feldgrau,  col_sage }, /* col_gray4, col_cyan, col_cyan */
 };
 
 /* tagging */
-static const char *tags[] = { "\uf17c", "2", "3", "4", "5", "6", "7", "8", "9" };
+static const char *tags[] = { "\uf17c", "\uf121", "3", "4" };
 
+/* tag colors */
 static const char *tagsel[][2] = {
 	/*  fg          bg  */
-	{col_gray1, col_sinanju}, /* tag 1 */
-	{col_gray1, col_sinanju}, /* tag 2 */
-	{col_gray1, col_sinanju}, /* tag 3 */
-	{col_gray1, col_sinanju}, /* tag 4 */
-	{col_gray1, col_sinanju}, /* tag 5 */
-	{col_gray1, col_sinanju}, /* tag 6 */
-        {col_gray1, col_sinanju}, /* tag 7 */
-        {col_gray1, col_sinanju}, /* tag 8 */
-        {col_gray1, col_sinanju}, /* tag 9 */
+	{col_seagreen, col_sage}, /* tag 1 */
+	{col_seagreen, col_sage}, /* tag 2 */
+	{col_seagreen, col_sage}, /* tag 3 */
+	{col_seagreen, col_sage}, /* tag 4 */
+	{col_seagreen, col_sage}, /* tag 5 */
+	{col_seagreen, col_sage}, /* tag 6 */
+        {col_seagreen, col_sage}, /* tag 7 */
+        {col_seagreen, col_sage}, /* tag 8 */
+        {col_seagreen, col_sage}, /* tag 9 */
 };
 
 static const Rule rules[] = {
@@ -71,7 +76,7 @@ static const Layout layouts[] = {
 
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
-static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray4, NULL };
+static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_sage, "-sf", col_gray4, NULL };
 static const char *termcmd[]  = { "st", NULL };
 
 static const Key keys[] = {
