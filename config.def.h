@@ -25,15 +25,15 @@ static const char *tags[] = { "\uf17c", "\uf121", "3", "4" };
 /* tag colors */
 static const char *tagsel[][2] = {
 	/*  fg          bg  */
-	{col_seagreen, col_sage}, /* tag 1 */
-	{col_seagreen, col_sage}, /* tag 2 */
-	{col_seagreen, col_sage}, /* tag 3 */
-	{col_seagreen, col_sage}, /* tag 4 */
-	{col_seagreen, col_sage}, /* tag 5 */
-	{col_seagreen, col_sage}, /* tag 6 */
-        {col_seagreen, col_sage}, /* tag 7 */
-        {col_seagreen, col_sage}, /* tag 8 */
-        {col_seagreen, col_sage}, /* tag 9 */
+	{col_feldgrau, col_sage}, /* tag 1 */
+	{col_feldgrau, col_sage}, /* tag 2 */
+	{col_feldgrau, col_sage}, /* tag 3 */
+	{col_feldgrau, col_sage}, /* tag 4 */
+	{col_feldgrau, col_sage}, /* tag 5 */
+	{col_feldgrau, col_sage}, /* tag 6 */
+        {col_feldgrau, col_sage}, /* tag 7 */
+        {col_feldgrau, col_sage}, /* tag 8 */
+        {col_feldgrau, col_sage}, /* tag 9 */
 };
 
 static const Rule rules[] = {
