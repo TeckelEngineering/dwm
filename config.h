@@ -8,32 +8,29 @@ static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
 static const char *fonts[]          = { "JetBrains Mono Nerd Font:antialias=true:size=11", "fontawesome:size=11" };
 static const char dmenufont[]       = "JetBrains Mono Nerd Font:antialias=true:size=11";
-static const char col_ashgray[]     = "#bec5ad";
-static const char col_sage[]        = "#a4b494";
-static const char col_seagreen[]    = "#519872";
-static const char col_feldgrau[]    = "#3b5249";
-static const char col_resinblack[]  = "#34252f";
+static const char col_storm[]       = "#24283b";
+static const char col_magenta[]     = "#bb9af7";
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
-	[SchemeNorm] = { col_sage, col_feldgrau, col_resinblack }, 
-	[SchemeSel]  = { col_sage, col_feldgrau,  col_sage }, 
+	[SchemeNorm] = { col_magenta, col_storm, col_storm }, 
+	[SchemeSel]  = { col_magenta, col_storm,  col_magenta }, 
 };
 
 /* tagging */
-static const char *tags[] = { "\uf17c", "\uf121", "3", "4" };
+static const char *tags[] = { "\uf17c", "\uf269", "\uf1c9", "\uf044", "\uf001", "\uf392" };
 
 /* tag colors */
 static const char *tagsel[][2] = {
 	/*  fg          bg  */
-	{col_feldgrau, col_sage}, /* tag 1 */
-	{col_feldgrau, col_sage}, /* tag 2 */
-	{col_feldgrau, col_sage}, /* tag 3 */
-	{col_feldgrau, col_sage}, /* tag 4 */
-	{col_feldgrau, col_sage}, /* tag 5 */
-	{col_feldgrau, col_sage}, /* tag 6 */
-        {col_feldgrau, col_sage}, /* tag 7 */
-        {col_feldgrau, col_sage}, /* tag 8 */
-        {col_feldgrau, col_sage}, /* tag 9 */
+	{col_storm, col_magenta}, /* tag 1 */
+	{col_storm, col_magenta}, /* tag 2 */
+	{col_storm, col_magenta}, /* tag 3 */
+	{col_storm, col_magenta}, /* tag 4 */
+	{col_storm, col_magenta}, /* tag 5 */
+	{col_storm, col_magenta}, /* tag 6 */
+    {col_storm, col_magenta}, /* tag 7 */
+    {col_storm, col_magenta}, /* tag 8 */
+    {col_storm, col_magenta}, /* tag 9 */
 };
 
 static const Rule rules[] = {
@@ -42,8 +39,8 @@ static const Rule rules[] = {
 	 *	WM_NAME(STRING) = title
 	 */
 	/* class      instance    title       tags mask     isfloating   monitor */
-	{ "Gimp",     NULL,       NULL,       0,            1,           -1 },
-	{ "Firefox",  NULL,       NULL,       1 << 8,       0,           -1 },
+	{ "Firefox",  NULL,       NULL,       2,       0,           -1 },
+    { "Discord",  NULL,       NULL,       3,       0,           -1 },
 };
 
 /* layout(s) */
@@ -72,7 +69,7 @@ static const Layout layouts[] = {
 
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
-static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_feldgrau, "-nf", col_sage, "-sb", col_sage, "-sf", col_seagreen, NULL };
+static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_storm, "-nf", col_magenta, "-sb", col_magenta, "-sf", col_storm, NULL };
 static const char *termcmd[]  = { "st", NULL };
 
 static const Key keys[] = {
